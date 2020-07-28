@@ -13,7 +13,7 @@ jobs:
           apt-get update -qq
           DEBIAN_FRONTEND=noninteractive xargs -a packages.txt apt-get install -qq
           python3 -m venv venv
-	  . venv/bin/activate
+          . venv/bin/activate
           pip install --upgrade --quiet -r requirements.txt
           python doc.py html
           python doc.py latexpdf
