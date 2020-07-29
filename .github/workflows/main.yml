@@ -24,8 +24,8 @@ jobs:
           name: build
           path: build
     - name: Publish
-      uses: peaceiris/actions-gh-pages@v3.7.0-4
+      uses: peaceiris/actions-gh-pages@v3.7.0-6
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build/html
-        destination_dir: ${GITHUB_REF##*/}
+        destination_dir: ${GITHUB_SHA}
