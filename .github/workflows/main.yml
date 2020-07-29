@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container: rscohn2/oneapi-spec:latest
     steps:
+    - uses: nelonoel/branch-name@v1
     - uses: actions/checkout@v2
     - name: Build
       run: |
@@ -18,6 +19,8 @@ jobs:
           python doc.py html
           python doc.py latexpdf
           python doc.py spelling
+	  mkdir public
+	  cp -r build/html public/${BRANCH_NAME}
     - name: Archive build
       uses: actions/upload-artifact@v1
       with:
@@ -27,5 +30,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3.7.0-6
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build/html
-        destination_dir: ${{GITHUB_SHA}}
+        publish_dir: ./build/public
+        keep_files: true
+
