@@ -1,0 +1,765 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>SYCL Reference &mdash; SYCL Reference  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction" href="sycl-intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home" alt="Documentation Home"> SYCL Reference
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="sycl-intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iface/sycl-index.html">Interface</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">SYCL Reference</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>SYCL Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://gitlab.com/rscohn2/sycl-ref/blob/sycl/source/sycl-index.rst" class="fa fa-gitlab"> Edit on GitLab</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sycl-reference">
+<h1>SYCL Reference<a class="headerlink" href="#sycl-reference" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sycl-intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="iface/sycl-index.html">Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="iface/sycl-index.html#header-file">Header File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iface/sycl-index.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iface/sycl-index.html#standard-library-classes">Standard Library Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iface/sycl-index.html#common-interface">Common Interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iface/common-byval.html">By-value Semantics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iface/common-reference.html">Reference Semantics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iface/properties.html">property_list</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/properties.html#id2">property_list</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/param_traits.html">param_traits</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iface/sycl-index.html#runtime-classes">Runtime Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iface/device-selector.html">Device selectors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/device-selector.html#device-selector">device_selector</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/device-selector.html#constructors">(constructors)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device-selector.html#select-device">select_device</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device-selector.html#operator">operator=</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device-selector.html#id4">operator()</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="iface/device-selector.html#built-in-device-selectors">Built-in Device Selectors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/platform.html">Platforms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/platform.html#platform">platform</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/platform.html#constructors">(constructors)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/platform.html#get">get</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/platform.html#get-devices">get_devices</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/platform.html#get-info">get_info</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/platform.html#has-extension">has_extension</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/platform.html#is-host">is_host</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/platform.html#get-platforms">get_platforms</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="iface/platform.html#platform-info">Platform Info</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/context.html">Contexts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/context.html#context">context</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/context.html#constructors">(constructors)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/context.html#get">get</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/context.html#is-host">is_host</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/context.html#get-platform">get_platform</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/context.html#get-devices">get_devices</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/context.html#get-info">get_info</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/context.html#has-property">has_property</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/context.html#get-property">get_property</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="iface/context.html#context-info">Context Info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/context.html#context-properties">Context Properties</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/device.html">Devices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/device.html#device">device</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#constructors">(constructors)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#get">get</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#is-host">is_host</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#is-cpu">is_cpu</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#is-gpu">is_gpu</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#is-accelerator">is_accelerator</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#get-platform">get_platform</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#get-info">get_info</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#has-extension">has_extension</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#create-sub-devices">create_sub_devices</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#get-devices">get_devices</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="iface/device.html#device-info">Device Info</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#info-device">device</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#device-type">device_type</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#partition-property">partition_property</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#partition-affinity-domain">partition_affinity_domain</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#local-mem-type">local_mem_type</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#fp-config">fp_config</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#global-mem-cache-type">global_mem_cache_type</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/device.html#execution-capability">execution_capability</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/queue.html">Queues</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/queue.html#queue">queue</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/queue.html#constructors">(constructors)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/queue.html#get">get</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/queue.html#get-context">get_context</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/queue.html#get-device">get_device</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/queue.html#is-host">is_host</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/queue.html#get-info">get_info</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/queue.html#submit">submit</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/queue.html#wait">wait</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/queue.html#wait-and-throw">wait_and_throw</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/queue.html#throw-asynchronous">throw_asynchronous</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="iface/queue.html#queue-info">Queue Info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/queue.html#queue-properties">Queue Properties</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/event.html">Events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/event.html#event">event</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/event.html#constructors">(constructors)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/event.html#cl-event-get">cl_event_get</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/event.html#is-host">is_host</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/event.html#get-wait-list">get_wait_list</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/event.html#wait">wait</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/event.html#id2">wait</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/event.html#wait-and-throw">wait_and_throw</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/event.html#id3">wait_and_throw</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/event.html#get-info">get_info</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/event.html#get-profiling-info">get_profiling_info</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="iface/event.html#event-info">Event info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/event.html#event-command-status">event_command_status</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/event.html#event-profiling-info">Event profiling info</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iface/sycl-index.html#data-access">Data access</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iface/buffer.html">Buffers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/buffer.html#buffer">buffer</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/buffer.html#constructors">(constructors)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/buffer.html#get-range">get_range</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/buffer.html#get-count">get_count</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/buffer.html#get-size">get_size</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/buffer.html#get-allocator">get_allocator</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/buffer.html#get-access">get_access</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/buffer.html#set-final-data">set_final_data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/buffer.html#set-write-back">set_write_back</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/buffer.html#is-sub-buffer">is_sub_buffer</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/buffer.html#reinterpret">reinterpret</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="iface/buffer.html#buffer-properties">Buffer properties</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/buffer.html#use-host-ptr">use_host_ptr</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="iface/buffer.html#use-host-ptr-constructors">(constructors)</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="iface/buffer.html#use-mutex">use_mutex</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="iface/buffer.html#use-mutex-constructors">(constructors)</a></li>
+<li class="toctree-l6"><a class="reference internal" href="iface/buffer.html#get-mutex-ptr">get_mutex_ptr</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="iface/buffer.html#context-bound">context_bound</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="iface/buffer.html#context-bound-constructors">(constructors)</a></li>
+<li class="toctree-l6"><a class="reference internal" href="iface/buffer.html#get-context">get_context</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/image.html">Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/image.html#image">image</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/image.html#constructors">(constructors)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/image.html#get-range">get_range</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/image.html#get-pitch">get_pitch</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/image.html#get-count">get_count</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/image.html#get-size">get_size</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/image.html#get-allocator">get_allocator</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/image.html#get-access">get_access</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/image.html#set-final-data">set_final_data</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/image.html#set-write-back">set_write_back</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="iface/image.html#image-properties">Image properties</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/image.html#use-host-ptr">use_host_ptr</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="iface/image.html#image-use-host-ptr-use-host-ptr">(constructors)</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="iface/image.html#use-mutex">use_mutex</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="iface/image.html#image-get-mutex-ptr-get-mutex-ptr">(constructors)</a></li>
+<li class="toctree-l6"><a class="reference internal" href="iface/image.html#get-mutex-ptr">get_mutex_ptr</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="iface/image.html#context-bound">context_bound</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="iface/image.html#image-context-bound-context-bound">(constructors)</a></li>
+<li class="toctree-l6"><a class="reference internal" href="iface/image.html#get-context">get_context</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="iface/image.html#image-channel-order">Image_channel_order</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/image.html#image-channel-type">Image_channel_type</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/accessors.html">Accessors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/buffer-accessor.html">Buffer accessors</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/buffer-accessor.html#buffer-accessor">Buffer accessor</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="iface/buffer-accessor.html#constructors">(constructors)</a></li>
+<li class="toctree-l6"><a class="reference internal" href="iface/buffer-accessor.html#is-placeholder">is_placeholder</a></li>
+<li class="toctree-l6"><a class="reference internal" href="iface/buffer-accessor.html#get-size">get_size</a></li>
+<li class="toctree-l6"><a class="reference internal" href="iface/buffer-accessor.html#get-count">get_count</a></li>
+<li class="toctree-l6"><a class="reference internal" href="iface/buffer-accessor.html#get-range">get_range</a></li>
+<li class="toctree-l6"><a class="reference internal" href="iface/buffer-accessor.html#get-offset">get_offset</a></li>
+<li class="toctree-l6"><a class="reference internal" href="iface/buffer-accessor.html#operator">operator ()</a></li>
+<li class="toctree-l6"><a class="reference internal" href="iface/buffer-accessor.html#id2">operator[]</a></li>
+<li class="toctree-l6"><a class="reference internal" href="iface/buffer-accessor.html#get-pointer">get_pointer</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="iface/buffer-accessor.html#buffer-accessor-properties">Buffer accessor properties</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="iface/local-accessor.html">Local accessor</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/local-accessor.html#constructors">(constructors)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/local-accessor.html#get-size">get_size</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/local-accessor.html#get-count">get_count</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/local-accessor.html#get-range">get_range</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/local-accessor.html#get-pointer">get_pointer</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/local-accessor.html#operator">operator[]</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/local-accessor.html#id1">operator ()</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="iface/image-accessor.html">Image accessor</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/image-accessor.html#constructors">(constructors)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/image-accessor.html#get-count">get_count</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/image-accessor.html#get-range">get_range</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/image-accessor.html#read">read</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/image-accessor.html#operator">operator[]</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="iface/accessor-enums.html">mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/accessor-enums.html#target">target</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/address-space.html">Multipointer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/address-space.html#access-address-space">access::address_space</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/address-space.html#multi-ptr">multi_ptr</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/address-space.html#constructors">(constructors)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/address-space.html#operator">operator=</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/address-space.html#id2">operator*</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/address-space.html#id3">operator-&gt;</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/address-space.html#get">get</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/address-space.html#implicit-conversions">(Implicit conversions)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/address-space.html#arithmetic-operators">(Arithmetic operators)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/address-space.html#prefetch">prefetch</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/address-space.html#relational-operators">(Relational operators)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/private_memory.html">private_memory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/private_memory.html#constructors">(constructors)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/private_memory.html#operators">(operators)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/sampler.html">Samplers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/sampler.html#address-mode">address_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/sampler.html#filtering-mode">filtering_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/sampler.html#coordinate-normalization-mode">coordinate_normalization_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/sampler.html#sampler">sampler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/sampler.html#constructors">(constructors)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/sampler.html#get-address-mode">get_address_mode</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/sampler.html#get-filtering-mode">get_filtering_mode</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/sampler.html#get-coordinate-normalization-mode">get_coordinate_normalization_mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iface/sycl-index.html#unified-shared-memory-usm">Unified shared memory (USM)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iface/usm-malloc.html">malloc_device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iface/usm-malloc.html#malloc-host">malloc_host</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iface/usm-malloc.html#malloc-shared">malloc_shared</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iface/usm-malloc.html#free">free</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iface/usm_allocator.html">usm_allocator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/usm_allocator.html#constructors">(constructors)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/usm_allocator.html#allocate">allocate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/usm_allocator.html#deallocate">deallocate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/usm_allocator.html#construct">construct</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/usm_allocator.html#destroy">destroy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/usm_allocator.html#operators">(operators)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/usm.html">alloc</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iface/sycl-index.html#expressing-parallelism">Expressing parallelism</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iface/range.html">range</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/range.html#constructors">(constructors)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/range.html#get">get</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/range.html#operator">operator[]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/range.html#size">size</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/range.html#arithmetic-operators">Arithmetic Operators</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/group.html">group</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/group.html#get-id">get_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/group.html#get-global-range">get_global_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/group.html#get-local-range">get_local_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/group.html#get-group-range">get_group_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/group.html#get-linear-id">get_linear_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/group.html#parallel-for-work-item">parallel_for_work_item</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/group.html#mem-fence">mem_fence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/group.html#async-work-group-copy">async_work_group_copy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/group.html#wait-for">wait_for</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/group.html#operator">operator[]</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/id.html">id</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/id.html#constructors">(constructors)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/id.html#get">get</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/id.html#operators">(operators)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/item.html">item</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/item.html#get-id">get_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/item.html#get-range">get_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/item.html#get-offset">get_offset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/item.html#get-linear-id">get_linear_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/item.html#operator">operator[]</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/item.html#id2">operator()</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/h_item.html">h_item</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/h_item.html#get-global">get_global</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/h_item.html#get-local">get_local</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/h_item.html#get-logical-local">get_logical_local</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/h_item.html#get-physical-local">get_physical_local</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/h_item.html#get-global-range">get_global_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/h_item.html#get-global-id">get_global_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/h_item.html#get-local-range">get_local_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/h_item.html#get-local-id">get_local_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/h_item.html#get-logical-local-range">get_logical_local_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/h_item.html#get-logical-local-id">get_logical_local_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/h_item.html#get-physical-local-range">get_physical_local_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/h_item.html#get-physical-local-id">get_physical_local_id</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/nd_item.html">nd_item</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_item.html#get-global-id">get_global_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_item.html#get-global-linear-id">get_global_linear_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_item.html#get-local-id">get_local_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_item.html#get-local-linear-id">get_local_linear_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_item.html#get-group">get_group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_item.html#get-group-linear-id">get_group_linear_id</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_item.html#get-group-range">get_group_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_item.html#get-global-range">get_global_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_item.html#get-local-range">get_local_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_item.html#get-offset">get_offset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_item.html#get-nd-range">get_nd_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_item.html#barrier">barrier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_item.html#mem-fence">mem_fence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_item.html#async-work-group-copy">async_work_group_copy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_item.html#wait-for">wait_for</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/nd_range.html">nd_range</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_range.html#constructors">(constructors)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_range.html#get-global-range">get_global_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_range.html#get-local-range">get_local_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_range.html#get-group-range">get_group_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/nd_range.html#get-offset">get_offset</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/device-event.html">device_event</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/device-event.html#wait">wait</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/command-group.html">Command groups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/command-group.html#command-group-function-object">Command group function object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/command-group.html#command-group">command_group</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/command-group.html#constructors">(constructors)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/command-group.html#events">events</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/command-group-handler.html">Invoking kernels</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/command-group-handler.html#handler">handler</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/command-group-handler.html#require">require</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/command-group-handler.html#set-arg">set_arg</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/command-group-handler.html#set-args">set_args</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/command-group-handler.html#single-task">single_task</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/command-group-handler.html#parallel-for">parallel_for</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/command-group-handler.html#parallel-for-work-group">parallel_for_work_group</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/command-group-handler.html#copy">copy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/command-group-handler.html#update-host">update_host</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/command-group-handler.html#fill">fill</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/kernel.html">Kernel</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/kernel.html#id1">kernel</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/kernel.html#constructors">(constructors)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/kernel.html#get">get</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/kernel.html#is-host">is_host</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/kernel.html#get-context">get_context</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/kernel.html#get-program">get_program</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/kernel.html#get-info">get_info</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/kernel.html#get-work-group-info">get_work_group_info</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="iface/kernel.html#info-kernel">info::kernel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/kernel.html#info-kernel-work-group">info::kernel_work_group</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/program.html">Program</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/program.html#info-program">info::program</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/program.html#program-state">program_state</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/program.html#id1">program</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/program.html#constructors">(constructors)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/program.html#get">get</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/program.html#is-host">is_host</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/program.html#compile-with-kernel-type">compile_with_kernel_type</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/program.html#build-with-source">build_with_source</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/program.html#link">link</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/program.html#has-kernel">has_kernel</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/program.html#get-kernel">get_kernel</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/program.html#get-info">get_info</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/program.html#get-binaries">get_binaries</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/program.html#get-context">get_context</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/program.html#get-devices">get_devices</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/program.html#get-compile-options">get_compile_options</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/program.html#get-link-options">get_link_options</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/program.html#get-build-options">get_build_options</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/program.html#get-state">get_state</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iface/sycl-index.html#error-handling">Error handling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iface/exception.html">Exceptions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/exception.html#exception">exception</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#what">what</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#has-context">has_context</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#get-context">get_context</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#get-cl-code">get_cl_code</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="iface/exception.html#exception-list">exception_list</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#size">size</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#begin">begin</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#end">end</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="iface/exception.html#derived-exceptions">Derived exceptions</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#runtime-error">runtime_error</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#kernel-error">kernel_error</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#accessor-error">accessor_error</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#nd-range-error">nd_range_error</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#event-error">event_error</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#invalid-parameter-error">invalid_parameter_error</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#device-error">device_error</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#compile-program-error">compile_program_error</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#link-program-error">link_program_error</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#invalid-object-error">invalid_object_error</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#memory-allocation-error">memory_allocation_error</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#platform-error">platform_error</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#profililng-error">profililng_error</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/exception.html#featured-non-supported">featured_non_supported</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="iface/exception.html#async-handler">async_handler</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iface/sycl-index.html#data-types">Data types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iface/scalar-types.html">Scalar types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/scalar-types.html#byte">byte</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="iface/vector-types.html">Vector types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/vector-types.html#rounding-mode">rounding_mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/vector-types.html#elem">elem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/vector-types.html#vec">vec</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/vector-types.html#constructors">(constructors)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/vector-types.html#conversion-functions">Conversion functions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/vector-types.html#get-count">get_count</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/vector-types.html#get-size">get_size</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/vector-types.html#convert">convert</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/vector-types.html#as">as</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/vector-types.html#swizzle">swizzle</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/vector-types.html#swizzle-access">swizzle access</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/vector-types.html#load">load</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/vector-types.html#store">store</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/vector-types.html#arithmetic-operators">Arithmetic operators</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iface/sycl-index.html#synchronization-and-atomics">Synchronization and atomics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iface/types.html">Synchronization types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/types.html#access-fence-space">access::fence_space</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/types.html#memory-order">memory_order</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/types.html#atomic">atomic</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/types.html#constructors">(constructors)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/types.html#store">store</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/types.html#load">load</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/types.html#exchange">exchange</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/types.html#compare-exchange-strong">compare_exchange_strong</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/types.html#fetch-add">fetch_add</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/types.html#fetch-sub">fetch_sub</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/types.html#fetch-and">fetch_and</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/types.html#fetch-or">fetch_or</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/types.html#fetch-xor">fetch_xor</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/types.html#fetch-min">fetch_min</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/types.html#fetch-max">fetch_max</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iface/sycl-index.html#io">IO</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iface/stream.html">Streams</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="iface/stream.html#stream-manipulator">stream_manipulator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/stream.html#stream-manipulators">Stream manipulators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iface/stream.html#stream-class">Stream Class</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="iface/stream.html#constructors">(constructors)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/stream.html#get-size">get_size</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/stream.html#get-work-item-buffer-size">get_work_item_buffer_size</a></li>
+<li class="toctree-l5"><a class="reference internal" href="iface/stream.html#get-max-statement-size">get_max_statement_size</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="iface/stream.html#operator">operator&lt;&lt;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="iface/sycl-index.html#built-in-functions">Built-in functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="iface/math.html">Math functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iface/integer.html">Integer functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iface/common.html">Common functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iface/geometric.html">Geometric functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iface/relational.html">Relational functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iface/vector.html">Vector data load and store functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iface/synchronization.html">Synchronization functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="iface/printf.html">Printf functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sycl-intro.html" class="btn btn-neutral float-right" title="Introduction" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Intel
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
