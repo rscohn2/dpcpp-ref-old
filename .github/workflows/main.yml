@@ -30,6 +30,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3.7.0-6
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build/public
+        publish_dir: public
         keep_files: true
 
